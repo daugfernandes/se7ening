@@ -183,7 +183,7 @@
         <dia:point val="3.55,12.8"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.37875,10.05;5.73831,15.7241"/>
+        <dia:rectangle val="1.37875,10.05;5.72125,15.64"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="2.3,10.1"/>
@@ -279,7 +279,7 @@
         <dia:point val="5.72563,12.8018"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.67559,12.7517;13.6012,12.8583"/>
+        <dia:rectangle val="5.67559,12.7518;13.6011,12.8582"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="5.72563,12.8018"/>
@@ -349,7 +349,7 @@
         <dia:point val="3.15,20.95"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="1.15125,18.2;5.16581,23.8241"/>
+        <dia:rectangle val="1.15125,18.2;5.14875,23.79"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="1.9,18.25"/>
@@ -394,7 +394,7 @@
         <dia:point val="5.16578,20.9036"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.11464,20.6464;14.1575,20.9547"/>
+        <dia:rectangle val="5.11464,20.6465;14.1575,20.9547"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="5.16578,20.9036"/>
@@ -464,7 +464,7 @@
         <dia:point val="5.166,21.8895"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.09956,21.8231;15.5556,26.767"/>
+        <dia:rectangle val="5.09956,21.8231;15.5555,26.7669"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="5.166,21.8895"/>
@@ -692,6 +692,32 @@
         <dia:connection handle="0" to="O9" connection="8"/>
         <dia:connection handle="1" to="O11" connection="8"/>
       </dia:connections>
+    </dia:object>
+    <dia:object type="Standard - Image" version="0" id="O16">
+      <dia:attribute name="obj_pos">
+        <dia:point val="27.4,2.95"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="27.35,2.9;29.45,5.68354"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="27.4,2.95"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="2"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="2.6835443037974684"/>
+      </dia:attribute>
+      <dia:attribute name="draw_border">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="keep_aspect">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="file">
+        <dia:string>#/home/david/imagens/buuuuuuuu.JPG#</dia:string>
+      </dia:attribute>
     </dia:object>
   </dia:layer>
 </dia:diagram>
