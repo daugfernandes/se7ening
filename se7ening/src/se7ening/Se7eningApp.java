@@ -1,5 +1,4 @@
 /*
-    Se7eningApp.java
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,11 +18,19 @@
         Address: Rua da Quinta Amarela, 60
                  4475-663 MAIA
                  PORTUGAL
-   
+
         Email:   daugfernandes@aim.com
- */
+
+*/
 
 package se7ening;
+
+/*
+
+    se7ening::Se7eningApp.java
+
+ */
+
 
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
