@@ -1,0 +1,36 @@
+Use case
+========
+Name: Start an Issue
+
+A user (the Issuer) with permissions to do that, registers an "Issue",
+describing the problem as much detailed as possible.
+
+Include: Alert Project Manager
+An Issue is createn in the system with the datetime of the operation
+and alerts the Project Manager.
+
+Include: Change status
+The Issue is marked with the status "Started".
+
+
+Use case
+========
+Name: Alert Project Manager
+
+Once the Issue is created, the Manager of the project should be informed so
+the next time he/she enters the system will be informed.
+
+
+Use case
+========
+Name: Change Status
+
+Depending on the caller Use case the status os the Issue should be changed
+for one of the following values:
+- started: right after its creation
+- confirmed: after confirmation of the claim
+- assigned: Issued assigned to a programmer for resolution
+- merged: Issued merged with another
+- closed: Issued closed (solved or not confirmed - the history of status
+show which is the case)
+
