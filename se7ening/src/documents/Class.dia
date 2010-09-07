@@ -1723,7 +1723,7 @@
         <dia:point val="9.125,12.3505"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="9.075,12.3005;11.0888,17.9497"/>
+        <dia:rectangle val="9.075,12.3005;11.0887,17.9497"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="9.125,12.3505"/>
@@ -2100,7 +2100,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="multiplicity">
-            <dia:string>#1#</dia:string>
+            <dia:string>#1...*#</dia:string>
           </dia:attribute>
           <dia:attribute name="arrow">
             <dia:boolean val="false"/>
@@ -2247,7 +2247,7 @@
         <dia:point val="28.2497,39.1"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="23.9604,37.6611;28.2997,39.95"/>
+        <dia:rectangle val="23.9604,37.6612;28.2997,39.95"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="28.2497,39.1"/>
@@ -2285,7 +2285,7 @@
         <dia:point val="21.9,31.05"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="21.85,31;22.4551,37.473"/>
+        <dia:rectangle val="21.85,31;23.85,37.473"/>
       </dia:attribute>
       <dia:attribute name="orth_points">
         <dia:point val="21.9,31.05"/>
@@ -2313,7 +2313,7 @@
             <dia:string>##</dia:string>
           </dia:attribute>
           <dia:attribute name="multiplicity">
-            <dia:string>#1#</dia:string>
+            <dia:string>#1...*#</dia:string>
           </dia:attribute>
           <dia:attribute name="arrow">
             <dia:boolean val="false"/>
