@@ -29,17 +29,25 @@ import java.sql.*;
 
 /**
  *
- * @author david
+ * Main class of the structure. All classes that represent
+ * objects store in database inherit from this one.
+ *
  */
 public class CManage
 {
     private int _id;
     private String _name;
+    /**
+     *  chan
+     */
     protected boolean _changed;
     protected boolean _new;
     protected boolean _deleted;
 
-    CManage()
+    /**
+     * Constructor
+     */
+    public CManage()
     {
         _id=0;
         _name="";
@@ -47,9 +55,11 @@ public class CManage
         _new=true;
         _deleted=false;
     }
+    /**
+     * Constructor with parameters
+     */
 
-
-    CManage(int id, String name)
+    public CManage(int id, String name)
     {
         _id=id;
         _name=name;
@@ -58,8 +68,14 @@ public class CManage
         _deleted=false;
     }
 
-    String getName() { return(_name); }
-    void setName(String newName)
+    /**
+     * Getter for name.
+     */
+    public String getName() { return(_name); }
+    /**
+     * Setter for name.
+     */
+    public void setName(String newName)
     {
         if(!_name.equals(newName))
             _changed=true;
@@ -67,28 +83,30 @@ public class CManage
         this._name=newName;
     }
 
-    int getId() { return(_id); }
+    public int getId() { return(_id); }
 
-    boolean hasChanged() { return(_changed); }
-    boolean isNew() { return(_new); }
-    boolean isDeleted() {  return(_deleted); }
+    public boolean hasChanged() { return(_changed); }
+    public boolean isNew() { return(_new); }
+    public boolean isDeleted() {  return(_deleted); }
 
-    /* Inserts or Updates 'this' record.
+    /**
+     * Inserts or Updates 'this' record.
      *    on INSERT returns new ID (autonumber);
      *    on Update returns number os rows affected (see MySQL function for more info)
      */
-    int Commit(Connection conn) throws Exception
+    public int Commit(Connection conn) throws Exception
     {
         _new=false;
         _changed=false;
         return(0);
     }
 
-    /* Deletes 'this' record.
+    /**
+     * Deletes 'this' record.
      *      Can be "recovered" by simply using Commit function; you should expect a new ID however.
      *      For that matter test for hasChanghed AND isDeleted.
      */
-    int Delete(Connection conn) throws Exception
+    public int Delete(Connection conn) throws Exception
     {
         _deleted=true;
         _changed=true;
