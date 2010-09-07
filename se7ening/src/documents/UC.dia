@@ -695,13 +695,13 @@
     </dia:object>
     <dia:object type="Standard - Image" version="0" id="O16">
       <dia:attribute name="obj_pos">
-        <dia:point val="27.4,2.95"/>
+        <dia:point val="37.7,0.5"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="27.35,2.9;29.45,5.68354"/>
+        <dia:rectangle val="37.65,0.45;39.75,3.23354"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="27.4,2.95"/>
+        <dia:point val="37.7,0.5"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="2"/>
