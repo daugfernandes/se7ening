@@ -26,8 +26,8 @@
 
 package se7ening;
 
-import java.awt.Color;
-import org.jdesktop.application.Action;
+import java.awt.*;
+import org.jdesktop.application.*;
 
 public class Se7eningAboutBox extends javax.swing.JDialog {
 

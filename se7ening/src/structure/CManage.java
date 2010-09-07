@@ -95,5 +95,11 @@ public class CManage
         _new=true;
         return(0);
     }
+
+    @Override
+    protected void finalize() throws Throwable
+    {
+        
+    }
 }
 
