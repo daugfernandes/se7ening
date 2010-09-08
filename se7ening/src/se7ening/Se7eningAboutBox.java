@@ -131,6 +131,7 @@ public class Se7eningAboutBox extends javax.swing.JDialog {
 
         jTextArea1.setColumns(20);
         jTextArea1.setEditable(false);
+        jTextArea1.setFont(resourceMap.getFont("jTextArea1.font")); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText(resourceMap.getString("jTextArea1.text")); // NOI18N
         jTextArea1.setName("jTextArea1"); // NOI18N
@@ -194,7 +195,7 @@ public class Se7eningAboutBox extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(closeButton)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(imageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+            .addComponent(imageLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
         );
 
         pack();
