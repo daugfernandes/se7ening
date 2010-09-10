@@ -6,7 +6,7 @@
  *                         4475-663 MAIA
  *                         PORTUGAL
  *
- *                         <azserrata@gmail.com>
+ *                         <daugfernandes@aim.com>
  *
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -23,47 +23,103 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 import java.sql.*;
+import java.util.Date;
 
-/**
- *
- * @author david
+/*
+
+    structure::CIssue.java
+
  */
-public class CSolution extends CManage
+public class CIssue extends CManage
 {
-    private CSolutionIssue _issues[];
-    private int _kissues;
+    private CIssuer _issuer;
+    private Date _dateIssued;
+    private int _status;
+    private CManager _manager;
 
-    CSolution()
+    CIssue()
     {
         super();
+        initProperties();
     }
 
-    CSolution(int id, String name)
+    CIssue(int id, String name)
     {
         super(id,name);
+        initProperties();
     }
 
-    CSolution(int id, Connection conn) throws Exception
+    /**
+     * Inicialize own properties
+     */
+    private void initProperties()
+    {
+        setStatus(CIssueStatus.Open());
+        setDateIssued(new Date());
+        setIssuer(null);
+        setManager(null);
+    }
+
+    CIssue(int id, Connection conn) throws Exception
     {
         super(id,"");
 
-        String simpleProc = "SELECT NAME FROM SOLUTION WHERE ID=?";
+        String simpleProc = "SELECT NAME, ID_ISSUER, ID_MANAGER FROM ISSUE WHERE ID=?";
         PreparedStatement ps = conn.prepareStatement(simpleProc);
 
         ps.setInt(1, id);
-        ResultSet res=ps.executeQuery( );
+        ResultSet res=ps.executeQuery();
 
         if(res.next())
+        {
             super.setName(res.getString(1));
+            setIssuer(new CIssuer());
+            setManager(new CManager());
+        }
 
     }
 
-    public void addIssue(CSolutionIssue newIssue)
+    public Date getDateIssued()
     {
+        return _dateIssued;
+    }
+    
+    public void setDateIssued(Date newDate)
+    {
+        _dateIssued=newDate;
+    }
 
+    public int getStatus()
+    {
+        return _status;
+    }
+
+    public void setStatus(int newStatus)
+    {
+        _status=newStatus;
+    }
+
+    public CIssuer getIssuer()
+    {
+        return _issuer;
+    }
+
+    public void setIssuer(CIssuer newIssuer)
+    {
+        _issuer=newIssuer;
+    }
+
+    public CManager getManager()
+    {
+        return _manager;
+    }
+
+    public void setManager(CManager newManager)
+    {
+        _manager=newManager;
     }
 
     @Override public int Commit(Connection conn) throws Exception
@@ -75,9 +131,9 @@ public class CSolution extends CManage
             CallableStatement cs;
 
             if(isNew()) // insert
-                simpleProc = "{ ? = call SOLUTION_ADD(?,?) }";
+                simpleProc = "{ ? = call ISSUE_ADD(?,?) }";
             else // update
-                simpleProc = "{ ? = call SOLUTION_UPD(?,?) }";
+                simpleProc = "{ ? = call ISSUE_UPD(?,?) }";
 
             cs = conn.prepareCall(simpleProc);
             cs.registerOutParameter(1, Types.INTEGER);
@@ -100,7 +156,7 @@ public class CSolution extends CManage
      */
     @Override public int Delete(Connection conn) throws Exception
     {
-        String simpleProc = "{ ? = call SOLUTION_DEL(?) }";
+        String simpleProc = "{ ? = call ISSUE_DEL(?) }";
         CallableStatement cs = conn.prepareCall(simpleProc);
         cs.registerOutParameter(1, Types.INTEGER);
         cs.setInt(2, getId());

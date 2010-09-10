@@ -23,13 +23,27 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 /*
 
-    structure::CManager.java
+    structure::CIssueStatus.java
 
  */
-public class CManager extends CUser {
+public abstract class CIssueStatus {
 
+    public static int Open()
+    {
+        return 1;
+    }
+
+    public static int Close()
+    {
+        return 2;
+    }
+
+    public static int Issued()
+    {
+        return 3;
+    }
 }

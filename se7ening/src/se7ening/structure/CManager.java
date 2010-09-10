@@ -23,13 +23,13 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 /*
 
-    structure::CSolutionIssue.java
+    structure::CManager.java
 
  */
-public class CSolutionIssue extends CIssue {
+public class CManager extends CUser {
 
 }

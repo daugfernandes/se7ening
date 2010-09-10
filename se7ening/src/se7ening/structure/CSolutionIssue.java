@@ -23,27 +23,13 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 /*
 
-    structure::CIssueStatus.java
+    structure::CSolutionIssue.java
 
  */
-public abstract class CIssueStatus {
+public class CSolutionIssue extends CIssue {
 
-    public static int Open()
-    {
-        return 1;
-    }
-
-    public static int Close()
-    {
-        return 2;
-    }
-
-    public static int Issued()
-    {
-        return 3;
-    }
 }
