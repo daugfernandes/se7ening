@@ -23,13 +23,13 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 /*
 
-    structure::CProjectIssue.java
+    structure::CFileIssue.java
 
  */
-public class CProjectIssue extends CIssue {
+public class CFileIssue extends CIssue {
 
 }

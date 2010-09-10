@@ -23,7 +23,7 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 import java.sql.*;
 

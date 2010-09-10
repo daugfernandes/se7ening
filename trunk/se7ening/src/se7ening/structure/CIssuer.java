@@ -23,14 +23,13 @@
  *
  */
 
-package structure;
+package se7ening.structure;
 
 /*
 
-    structure::CProject.java
+    structure::CIssuer.java
 
  */
-public class CProject extends CManage {
-
+public class CIssuer extends CUser {
 
 }
